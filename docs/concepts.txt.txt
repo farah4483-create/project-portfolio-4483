@@ -1,0 +1,27 @@
+1. What is client-side vs. server-side?
+
+Client-side refers to everything that runs in the user's browser. It includes HTML, CSS, and JavaScript, which are responsible for the structure, design, and interactivity of the website.
+
+Server-side refers to the part of the application that runs on a server. It processes requests, handles databases, and sends responses back to the client.
+
+---
+
+2. What is the role of HTML, CSS, and JavaScript in web development?
+
+HTML (HyperText Markup Language) is used to create the structure of a web page.
+
+CSS (Cascading Style Sheets) is used to style and design the web page (colors, layout, fonts).
+
+JavaScript is used to add interactivity and dynamic behavior to the website.
+
+---
+
+3. Describe the folder structure and its purpose.
+
+The project folder is organized into subfolders to keep files clean and organized.
+
+- The "images" folder stores all images used in the website.
+- The "css" folder stores all styling files.
+- The "docs" folder contains documentation files like concepts.txt.
+
+This structure helps in maintaining and managing the project easily.
