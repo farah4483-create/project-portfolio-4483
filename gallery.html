@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Gallery</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>My Gallery</h1>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+<main>
+    <h2>My Cosmetic Work 💄</h2>
+
+<div class="gallery">
+    <img src="images/1.jpeg" onclick="openSlider(0)">
+    <img src="images/2.jpeg" onclick="openSlider(1)">
+    <img src="images/3.jpeg" onclick="openSlider(2)">
+    <img src="images/4.jpeg" onclick="openSlider(3)">
+    <img src="images/5.jpeg" onclick="openSlider(4)">
+    <img src="images/6.jpeg" onclick="openSlider(5)">
+    <img src="images/7.jpeg" onclick="openSlider(6)">
+    <img src="images/8.jpeg" onclick="openSlider(7)">
+    <img src="images/9.jpeg" onclick="openSlider(8)">
+    <img src="images/10.jpeg" onclick="openSlider(9)">
+</div>
+        
+    </div>
+</main>
+
+<footer>
+    <p>© 2026 Farah Cosmetics</p>
+</footer>
+<div id="slider" class="slider">
+    <span class="close" onclick="closeSlider()">×</span>
+    <img id="slider-img">
+    <div class="prev" onclick="changeSlide(-1)">❮</div>
+    <div class="next" onclick="changeSlide(1)">❯</div>
+</div>
+
+<script>
+let images = [
+    "images/1.jpeg",
+    "images/2.jpeg",
+    "images/3.jpeg",
+    "images/4.jpeg",
+    "images/5.jpeg",
+    "images/6.jpeg",
+    "images/7.jpeg",
+    "images/8.jpeg",
+    "images/9.jpeg",
+    "images/10.jpeg"
+];
+
+let currentIndex = 0;
+
+function openSlider(index) {
+    currentIndex = index;
+    document.getElementById("slider").style.display = "flex";
+    document.getElementById("slider-img").src = images[currentIndex];
+}
+
+function closeSlider() {
+    document.getElementById("slider").style.display = "none";
+}
+
+function changeSlide(step) {
+    currentIndex += step;
+
+    if (currentIndex < 0) currentIndex = images.length - 1;
+    if (currentIndex >= images.length) currentIndex = 0;
+
+    document.getElementById("slider-img").src = images[currentIndex];
+}
+</script>
+</body>
+</html>
